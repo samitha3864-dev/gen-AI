@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Product Description Generator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🤖 AI Product Description Generator</h1>
+
+        <p class="subtitle">
+            Generate SEO Optimized Product Descriptions using AI
+        </p>
+
+        <div class="image-box">
+
+            <img
+            id="productImage"
+            src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png">
+
+        </div>
+
+        <div class="grid">
+
+            <input
+            id="product_name"
+            type="text"
+            placeholder="Product Name">
+
+            <input
+            id="brand"
+            type="text"
+            placeholder="Brand">
+
+            <input
+            id="price"
+            type="text"
+            placeholder="Price">
+
+            <select id="category">
+
+                <option>Electronics</option>
+
+                <option>Mobile</option>
+
+                <option>Laptop</option>
+
+                <option>Watch</option>
+
+                <option>Shoes</option>
+
+                <option>Fashion</option>
+
+                <option>Beauty</option>
+
+                <option>Home Appliance</option>
+
+                <option>Kitchen</option>
+
+                <option>Furniture</option>
+
+                <option>Sports</option>
+
+            </select>
+
+            <select id="tone">
+
+                <option>Professional</option>
+
+                <option>Luxury</option>
+
+                <option>Friendly</option>
+
+                <option>Technical</option>
+
+                <option>Marketing</option>
+
+            </select>
+
+            <select id="audience">
+
+                <option>Students</option>
+
+                <option>Developers</option>
+
+                <option>Business</option>
+
+                <option>Kids</option>
+
+                <option>Women</option>
+
+                <option>Everyone</option>
+
+            </select>
+
+            <select id="language">
+
+                <option>English</option>
+
+                <option>Tamil</option>
+
+            </select>
+
+        </div>
+
+        <textarea
+        id="features"
+        rows="5"
+        placeholder="Enter Product Features..."></textarea>
+
+        <button
+        id="generateBtn">
+
+        🚀 Generate Description
+
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="result-card">
+
+        <h2>Generated Content</h2>
+
+        <div class="loader"
+             id="loader">
+
+            <div class="spinner"></div>
+
+            <p>Generating AI Response...</p>
+
+        </div>
+
+        <div id="output">
+
+            <h3>SEO Title</h3>
+
+            <textarea id="seo_title"></textarea>
+
+            <h3>Description</h3>
+
+            <textarea id="description"></textarea>
+
+            <h3>Benefits</h3>
+
+            <textarea id="benefits"></textarea>
+
+            <h3>Keywords</h3>
+
+            <textarea id="keywords"></textarea>
+
+            <h3>Call To Action</h3>
+
+            <textarea id="cta"></textarea>
+
+            <div class="buttons">
+
+                <button id="copyBtn">
+
+                    📋 Copy
+
+                </button>
+
+                <button id="pdfBtn">
+
+                    📄 Download PDF
+
+                </button>
+
+                <button id="txtBtn">
+
+                    📄 Download TXT
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>

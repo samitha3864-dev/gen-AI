@@ -9,7 +9,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.enums import TA_CENTER
 
-app = Flask(__name__)
+
 
 DB_NAME = "database.db"
 
@@ -43,7 +43,7 @@ def init_db():
 
     conn.commit()
     conn.close()
-
+app = Flask(__name__)
 
 init_db()
 
